@@ -2,6 +2,11 @@ package homework.week02;
 
 import java.util.Scanner;
 
+/**
+ * Switch-based library console application.
+ * <p>
+ * Manages up to 2 books using dedicated variables.
+ */
 public class MainLibrary {
 
     public static void main(String[] args) {
@@ -14,12 +19,12 @@ public class MainLibrary {
         int chose;
         do {
             System.out.println("""
-                please select an operation:
-                1.borrowbook
-                2.returnbook
-                3.query total number of books
-                4.exit
-                """);
+                    please select an operation:
+                    1.borrowbook
+                    2.returnbook
+                    3.query total number of books
+                    4.exit
+                    """);
             chose = in.nextInt();
             int type;
             switch (chose) {
@@ -37,7 +42,8 @@ public class MainLibrary {
                         } else {
                             System.out.println("Invalid input, please enter again:");
                         }
-                    } while (type != 1 && type != 2);break;
+                    } while (type != 1 && type != 2);
+                    break;
 
                 case 2:
                     System.out.println("return which book?" +
@@ -66,5 +72,4 @@ public class MainLibrary {
             }
         } while (chose != 4);
     }
-
 }
