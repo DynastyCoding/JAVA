@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-public class Week01_JavaBasics_30Review {
+public class JavaBasicsIntensive {
     public static void q1() {
         int score = 85;
         System.out.println(score);

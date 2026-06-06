@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-public class Week02_While_17Enhance {
+public class WhileDrills {
 
     static Scanner in = new Scanner(System.in);
 

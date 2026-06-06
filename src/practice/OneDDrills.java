@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-public class Week02_Array_Enhance {
+public class OneDDrills {
 
     static Scanner in = new Scanner(System.in);
 
@@ -160,38 +160,140 @@ public class Week02_Array_Enhance {
         }
         System.out.printf("Min is %d, index is %d", min, index);
     }
-    public static void ex3(){
+
+    public static void ex3() {
         String[] arr = {"cat", "dog", "bird", "fish"};
-        System.out.println("Please enter one kind of animal name:");
+        System.out.println("Please enter an animal name:");
         String inp = in.nextLine();
-        int i=-1;
+        int i;
         for (i = 0; i < arr.length; i++) {
-            if(arr[i].equals(inp)){
+            if (arr[i].equals(inp)) {
                 break;
             }
         }
-        if(i!=arr.length){
-            System.out.printf("Found at index %d",i);
-        }else{
+        if (i != arr.length) {
+            System.out.printf("Found at index %d", i);
+        } else {
             System.out.println("No found");
         }
     }
 
-    public static void ex4(){
+
+    public static void ex4() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int i;
         for (i = 0; i < arr.length; i++) {
-            if(arr[i]>5){
-                System.out.println(arr[i]);break;
+            if (arr[i] > 5) {
+                System.out.println(arr[i]);
+                break;
             }
         }
-        if(i==arr.length){
+        if (i == arr.length) {
             System.out.println("None");
+        }
+    }
+
+    public static void p11() {
+        int[] arr = {4, 7, 2, 9, 5, 1, 8};
+        int max = arr[0];
+        int maxInd = 0;
+        int min = arr[0];
+        int minInd = 0;
+        int i;
+        for (i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                maxInd = i;
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+                minInd = i;
+            }
+        }
+        System.out.printf("""
+                Max is %d, max index is %d.
+                Min is %d, min index is %d.
+                """, max, maxInd, min, minInd);
+    }
+
+    public static void p12() {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        for (int i = 0; i < arr.length / 2; i++) {
+
+            int temp = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = arr[i];
+            arr[i] = temp;
+        }
+        for (int num : arr) {
+            System.out.println(num);
+        }
+    }
+
+    public static void p13() {
+
+        int[] arr = {3, 8, 1, 5, 9, 2};
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+
+                    for (int num : arr) {
+                        System.out.print(num);
+                    }
+                    System.out.println();
+                }
+            }
+        }
+    }
+
+    public static void p14() {
+        int[] arr = {5, 2, 9, 1, 7, 3};
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        for (int num : arr) {
+            System.out.print(num);
+        }
+    }
+
+    public static void p15() {
+        int[] arr = {5, 2, 9, 1, 7, 3};
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        for (int num : arr) {
+            System.out.print(num);
+        }
+    }
+
+    //shift two spaces to the left
+    public static void p16() {
+        int[] arr = {10, 20, 30, 40, 50, 60};
+        int[] newarr = new int[6];
+        for (int i = 0; i < arr.length; i++) {
+            newarr[i] = arr[(i + 2) % 6];
+        }
+        for (int num : newarr) {
+            System.out.println(num);
         }
     }
 
 
     public static void main(String[] args) {
-        ex3();
+        p16();
     }
 }
