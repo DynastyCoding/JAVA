@@ -46,5 +46,6 @@
 ## 怎麼找我
 
 - GitHub: [DynastyStack] https://github.com/DynastyCoding
+- Threads: https://www.threads.com/@dynastycoder
 
 ⭐️ 我正在尋找結訓後的全端機會，歡迎交流。
