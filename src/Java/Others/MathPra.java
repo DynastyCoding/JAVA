@@ -1,6 +1,6 @@
 package Java.Others;
 
-public class Math {
+public class MathPra {
     public static void main(String[] args) {
 
         System.out.println(java.lang.Math.abs(-369));

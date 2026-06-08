@@ -2,7 +2,7 @@ package Java.Others;
 
 import java.util.Scanner;
 
-public class Random {
+public class RandomPra {
 
     public static void guessNumber() {
         Scanner in = new Scanner(System.in);
