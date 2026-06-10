@@ -1,4 +1,4 @@
-package homework.week02;
+package Java.others;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -77,8 +77,7 @@ public class CharStringPra {
 
         //取代文字
         System.out.println("A B C".replace(" ","_"));//可空格、字元、字串
-        System.out.println("aabbcc".replace("ab","xxx"));//
-
+        System.out.println("aabbcc".replace("ab","xxx"));//可超過原本字數
 
 
     }
