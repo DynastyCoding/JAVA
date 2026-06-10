@@ -2,7 +2,7 @@
 
 - Background : NCKU History | NCKU Financial
 - Experience : Gas station manager 2 years
-- 全端軟體工程師培訓中
+- 全端學習中
 
 ## About me
 
