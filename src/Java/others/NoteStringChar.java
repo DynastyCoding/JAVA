@@ -2,6 +2,7 @@ package Java.others;
 
 import java.util.Locale;
 import java.util.Scanner;
+import java.lang.String;
 
 public class NoteStringChar {
 
@@ -76,14 +77,44 @@ public class NoteStringChar {
         System.out.println(s.trim());
 
         //取代文字
-        System.out.println("A B C".replace(" ","_"));//可空格、字元、字串
-        System.out.println("aabbcc".replace("ab","xxx"));//可超過原本字數
+        System.out.println("A B C".replace(" ", "_"));//可空格、字元、字串
+        System.out.println("aabbcc".replace("ab", "xxx"));//可超過原本字數
 
+        //檢查字串是否包含指定內容
+        System.out.println(s.contains("Hello"));
+        System.out.println(s.contains(""));//空字串永遠包含在內
+        System.out.println(s.contains("hello"));//大小寫敏感
 
+        //檢查字串頭尾是否包含指定內容
+        System.out.println(s.startsWith("Hello"));
+        System.out.println(s.endsWith("World"));
+        System.out.println(s.startsWith("World", 6));
+        //可以從中間開始找(ends不行)
+        //contains:只看有沒有出現，不看在哪裡/回傳boolean
+        //indexOf():找出第一次出現的索引位置/回傳int
     }
 
+    public static void splitStringJoin() {
+
+        // 字元分割
+        String data = "I,My,Me,Mine";
+        String[] result = data.split(",");
+        System.out.println(result.length);
+        System.out.println(result[0]);
+
+        //split()參數為Regex(. * + ? | ( ) [ ] { } ^ $),
+        //故要以雙斜線跳脫
+        String ip = "192.168.1.1";
+        String[] parts = ip.split("\\.");
+        System.out.println(parts[0]);
+
+        //組合基本字元、字串、陣列、集合
+        String[] words = {"Hello", "Fucking", "World"};
+        String path = String.join("/", words);
+        System.out.println(path);
+    }
 
     public static void main(String[] args) {
-        stringHelper();
+        splitStringJoin();
     }
 }

@@ -20,6 +20,10 @@ public class CollectionPra {
 
     public static void immutableCollection(){
 
+        List<String> weekdays = List.of("Monday","Tuesday","Wednesday",
+                "Thursday","Friday","Saturday","Sunday");
+
+
 
     }
 
