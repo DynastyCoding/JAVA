@@ -2,7 +2,7 @@ package Java.others;
 
 import java.util.Scanner;
 
-public class IsInteger {
+public class CharacterInputValidator {
 
     static Scanner in = new Scanner(System.in);
 

@@ -2,7 +2,7 @@ package Java.others;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
-public class DateDiff {
+public class DateIntervalCalculator {
     public static void main(String[] args) {
         LocalDate startDate = LocalDate.of(2024, 1, 1);
         LocalDate endDate = LocalDate.now();

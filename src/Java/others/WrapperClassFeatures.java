@@ -2,7 +2,7 @@ package Java.others;
 
 import java.util.Scanner;
 
-public class WrapperClass {
+public class WrapperClassFeatures {
 
     static Scanner in = new Scanner(System.in);
 

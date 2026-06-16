@@ -1,6 +1,6 @@
 package Java.others;
 import java.util.*;
-public class CollectionPra {
+public class CollectionPractice {
     public static void collection() {
 
         List<String> fruits = new ArrayList<>(List.of("apple","banana","orange","grape"));

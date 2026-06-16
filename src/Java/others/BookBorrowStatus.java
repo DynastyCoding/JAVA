@@ -1,6 +1,6 @@
 package Java.others;
 
-public enum  BR{
+public enum BookBorrowStatus {
 
     SUCCESS(200, "borrow successful"),
     NOT_FOUND(404, "book couldn't be found"),
@@ -9,7 +9,7 @@ public enum  BR{
     private int code;
     private String message;
 
-    BR(int code, String message) {  // 建構子
+    BookBorrowStatus(int code, String message) {  // 建構子
         this.code = code;
         this.message = message;
     }

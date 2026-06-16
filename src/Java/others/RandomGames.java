@@ -3,7 +3,7 @@ package Java.others;
 import java.util.Date;
 import java.util.Scanner;
 
-public class RandomPractice {
+public class RandomGames {
 
     public static void guessNumber() {
         Scanner in = new Scanner(System.in);

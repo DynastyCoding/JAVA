@@ -1,6 +1,6 @@
 package Java.others;
 
-public class OrderStatusMain {
+public class OrderPlacement {
 
     static OrderStatus placeOrder(int stock, int amount) {
         if (amount <= 0) {

@@ -2,7 +2,7 @@ package Java.others;
 
 import java.util.Objects;
 
-public class EmployeeHashCode {
+public class HashCodeAndEquals {
 
     static class EmployeeDefault {
         String name;

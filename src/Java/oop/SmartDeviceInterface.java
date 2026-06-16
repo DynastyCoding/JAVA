@@ -1,4 +1,4 @@
-package Java.others;
+package Java.oop;
 
 interface Phone{
     void call();

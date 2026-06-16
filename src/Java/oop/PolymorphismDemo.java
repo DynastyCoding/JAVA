@@ -1,4 +1,4 @@
-package Java.others;
+package Java.oop;
 
 public class PolymorphismDemo {
     static class Animal {
