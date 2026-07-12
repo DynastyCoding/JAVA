@@ -17,7 +17,6 @@ public class OddTable {
                 continue;
             }
             System.out.printf("%d x %d = %d %n", n, i, n * i);
-
         }
     }
 }
