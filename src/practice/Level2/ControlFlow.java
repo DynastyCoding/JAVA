@@ -109,7 +109,7 @@ public class ControlFlow {
         int amount = 2500;
         if(amount>2000){
             System.out.println(amount*0.8);
-        }else if (amount<=2000&&amount>=1000){
+        }else if (amount>=1000){
             System.out.println(amount*0.9);
         }else{
             System.out.println((amount));
@@ -119,7 +119,7 @@ public class ControlFlow {
     //奇偶判定 無旗標版
     public static void p13(){
         int n = 66;
-        for (int i = 2; i < n/2; i++) {
+        for (int i = 2; i <= n/2; i++) {
             if(n%i ==0){
                 System.out.println("Isn't prime.");
                 return;
@@ -185,14 +185,55 @@ public class ControlFlow {
     public static void p17(){
 
         String slogan = "Spring Boot is powerful";
+        String lowerSlogan = slogan.toLowerCase();
 
-        for (int i = 0; i < slogan.length(); i++) {
-            
+        int count = 0;
+        for (int i = 0; i < lowerSlogan.length(); i++) {
+            if(lowerSlogan.charAt(i) == 'o'){
+                count++;
+            }
+        }
+        System.out.printf("o appeared %d times.",count);
+    }
+
+    public static void p18(){
+        int nums = 360;
+        if(nums%10 == 0||nums%10 == 9){
+            System.out.println("Congratulation winning the price!");
+        }else{
+            System.out.println("Didn't win.");
         }
     }
 
+    public static void p19(){
+        double num = 1.01;
+        double result = 1.0;//⚠️注意要寫1.0
+        for (int i = 0; i < 365; i++) {
+            result = result*num;
+        }
+        System.out.println(result);
+    }
+
+    public static void p20(){
+
+        int chance = 7;
+        boolean isSuccess = false;
+
+        while(chance>1){
+            System.out.println("Trying...");
+            chance--;
+        }
+
+        if(chance == 0){
+            isSuccess = true;
+        }
+
+        System.out.println("挑戰結果： " + isSuccess);
+
+    }
+
     public static void main(String[] args) {
-        p16();
+        p20();
     }
 
 }
