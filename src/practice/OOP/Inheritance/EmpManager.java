@@ -1,38 +1,42 @@
 package practice.OOP.Inheritance;
 
-public class EmpManager extends Employee {
+public class EmpManager extends Employee{
 
-    private int bonus;
+    private int teamSize;
 
-    public EmpManager(String name, int salary, int bonus) {
-        super(name, salary);
-        this.bonus = bonus;
+    public EmpManager(String name, String department,int teamSize){
+        super(name, department);
+        setTeamSize(teamSize);
     }
 
-    public int getBonus() {
-        return bonus;
+    public int getTeamSize(){
+        return teamSize;
     }
 
-    public void setBonus(int bonus) {
-        this.bonus = bonus;
-    }
-
-    @Override
-    public int getSalary() {
-        return super.getSalary() + bonus;
-    }
-
-    @Override
-    public void applyRaise(int percent) {
-        super.applyRaise(percent);
-        bonus += bonus * percent / 100;
+    public void setTeamSize(int teamSize){
+        if(teamSize<0){
+            this.teamSize = 0;
+        }else{
+            this.teamSize = teamSize;
+        }
     }
 
     @Override
-    public void printInfo() {
-        System.out.println(name + " | 底薪:"
-                + salary + " | 獎金:"
-                + bonus + " | 總薪資:"
-                + getSalary());
+    public void checkIn(){
+        super.checkIn();
+        System.out.println(name + " checking team progress.");
     }
+
+    @Override
+    public void work(){
+        System.out.println(name + " is meeting and managing team.");
+    }
+
+    @Override
+    public void printInfo(){
+        super.printInfo();
+        System.out.println("team size: " + teamSize);
+    }
+
+
 }

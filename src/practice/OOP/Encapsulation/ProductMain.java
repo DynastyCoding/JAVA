@@ -2,21 +2,18 @@ package practice.OOP.Encapsulation;
 
 public class ProductMain {
     public static void main(String[] args) {
-
-        Product p1 = new Product("A76", "eraser", 15);
-        Product p2 = new Product("B44", "pen", 25);
-
+        Product p1 = new Product("P001", "筆電", 25000, 10);
         p1.printInfo();
+
+        System.out.println();
+
+        Product p2 = new Product("P002", "手機", -500, 5);
         p2.printInfo();
 
-        System.out.println("ID: " + p2.getId());
-        System.out.println("Name: " + p2.getName());
-        System.out.println("Stock: " + p2.getStock());
+        System.out.println();
 
-        p2.setStock(20);
-        p2.printInfo();
-
-        p2.setStock(-15);
-        p2.printInfo();
+        p1.reduceStock(3);
+        p1.reduceStock(20);
+        p1.printInfo();
     }
 }

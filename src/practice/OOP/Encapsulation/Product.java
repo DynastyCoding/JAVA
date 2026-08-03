@@ -1,44 +1,63 @@
 package practice.OOP.Encapsulation;
 
 public class Product {
-    private String id;
+
+    private final String id;
     private String name;
+    private int price;
     private int stock;
 
-    public Product(String id, String name, int stock) {
+    public Product(String id, String name, int price, int stock){
         this.id = id;
         this.name = name;
-        if (stock >= 0) {
-            this.stock = stock;
-        } else {
+        setPrice(price);
+
+        if(stock<0){
             this.stock = 0;
-            System.out.println("Invalid input, set to 0.");
+        }else{
+            this.stock = stock;
         }
     }
 
-    public String getId() {
+    public String getId(){
         return id;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 
-    public int getStock() {
+    public int getPrice(){
+        return price;
+    }
+
+    public int getStock(){
         return stock;
     }
 
-    public void setStock(int stock) {
-        if (stock >= 0) {
-            this.stock = stock;
-        } else {
-            this.stock = 0;
-            System.out.println("Invalid input, set to 0.");
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setPrice(int price){
+        if(price<=0){
+            this.price = 100;
+        }else{
+            this.price = price;
         }
     }
 
-    public void printInfo() {
-        System.out.println(id + " | " + name + " | " + stock);
+    public void reduceStock(int amount){
+        if(stock<amount){
+            System.out.println("Error: Insufficient stock.");
+        }else{
+            stock-=amount;
+            System.out.printf("Remaining inventory: %d.", stock);
+        }
+    }
+
+    public void printInfo(){
+        System.out.printf("id: %s, name: %s, price: %d, stock: %d.",id,name,price,stock);
     }
 
 }
