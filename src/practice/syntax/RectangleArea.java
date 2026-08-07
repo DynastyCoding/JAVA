@@ -1,4 +1,4 @@
-package practice;
+package practice.syntax;
 
 public class RectangleArea {
 
