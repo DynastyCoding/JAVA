@@ -1,4 +1,4 @@
-package practice.advanced.collections;
+package practice.advanced.collections.ArrayList;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ public class RestaurantReservation {
     private ArrayList<String> reservations = new ArrayList<>();
 
     public boolean addReservation(String name){
-        if( name == null ){
+        if( name == null || name.isEmpty()){
             return false;
         }else{
             reservations.add(name);
@@ -22,8 +22,9 @@ public class RestaurantReservation {
     public void cancelLast(){
         if(reservations.isEmpty()){
             System.out.println("List is empty.");
+        }else{
+            reservations.remove(reservations.size()-1);
         }
-        reservations.remove(reservations.size()-1);
     }
 
     public boolean hasReservation(String name){
@@ -35,8 +36,12 @@ public class RestaurantReservation {
     }
 
     public void printAll(){
-        for (int i = 0; i < reservations.size(); i++) {
-            System.out.println(reservations.get(i));
+        if(reservations.isEmpty()){
+            System.out.println("No reservations");
+        }else{
+            for (int i = 0; i < reservations.size(); i++) {
+                System.out.println(reservations.get(i));
+            }
         }
     }
 
