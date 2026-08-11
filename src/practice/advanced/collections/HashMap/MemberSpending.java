@@ -15,6 +15,12 @@ public class MemberSpending {
         }
     }
 
+    public int getSpending(String memberId){
+        if(map.containsKey(memberId)){
+            return map.get(memberId);
+        }
+    }
+
 
 
 }
