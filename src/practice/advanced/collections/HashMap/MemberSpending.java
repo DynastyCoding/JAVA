@@ -18,9 +18,27 @@ public class MemberSpending {
     public int getSpending(String memberId){
         if(map.containsKey(memberId)){
             return map.get(memberId);
+        }else{
+            return -1;
         }
     }
 
+    public boolean removeMember(String memberId){
+        if(map.containsKey(memberId)){
+            map.remove(memberId);
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    public int getTotalMembers(){
+        return map.size();
+    }
 
+    public void printAll(){
+        for(String key : map.keySet()){
+            System.out.println(key + ": $" + String.format("%,d", map.get(key)));
+        }
+    }
 }
