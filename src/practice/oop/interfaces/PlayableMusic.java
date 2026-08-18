@@ -16,11 +16,13 @@ public class PlayableMusic implements Playable{
 
     @Override
     public void play(){
+
         System.out.println("Playing song: " + songTitle);
     }
 
     @Override
     public String getDeviceType(){
+
         return "Music Player";
     }
 }

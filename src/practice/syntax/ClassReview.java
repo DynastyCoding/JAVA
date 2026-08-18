@@ -13,6 +13,7 @@ public class ClassReview {
     }
 
     static void talk(String content) {
+
         System.out.println(content);
     }
 }
