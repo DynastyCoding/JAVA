@@ -17,6 +17,5 @@ public class GradeMain {
         System.out.println("Passing students: " + reports.getPassingStudents());
 
         System.out.println("Average: " + reports.getAverage());
-
     }
 }
