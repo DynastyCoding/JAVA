@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class ATMSystem {
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("enter your account balance:");
-        int bal = in.nextInt();
+        int currentBalance = scanner.nextInt();
         System.out.println("enter your withdrawal amount:");
-        int wit = in.nextInt();
+        int withdrawalAmount = scanner.nextInt();
 
-        if (wit < 0) {
+        if (withdrawalAmount < 0) {
             System.out.println("incorrect withdrawal amount.");
-        } else if (wit > bal) {
+        } else if (withdrawalAmount > currentBalance) {
             System.out.println("insufficient balance.");
-        } else if (wit % 100 == 0) {
+        } else if (withdrawalAmount % 100 == 0) {
             System.out.println("withdrawal successful.");
         } else {
             System.out.println("withdrawal amount must be a multiple of 100.");
         }
-        in.close();
+        scanner.close();
 
     }
 }
