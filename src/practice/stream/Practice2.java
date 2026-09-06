@@ -2,7 +2,7 @@ package practice.stream;
 
 import java.util.List;
 
-public class StreamPractice2 {
+public class Practice2 {
     public static void main(String[] args) {
         List<Integer> amounts = List.of(800, 1200, 1500, 600, 2000);
         List<Double> discountAmounts = amounts.stream()
