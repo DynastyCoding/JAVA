@@ -1,6 +1,6 @@
-package practice.stream_string;
+package practice.String;
 
-public class StringPractice2 {
+public class Practice2 {
     public static void main(String[] args) {
         String fullName = " Duke Levi ";
         String normalizedName = fullName

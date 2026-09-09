@@ -1,6 +1,6 @@
-package practice.stream_string;
+package practice.String;
 
-public class StringPractice3 {
+public class Practice3 {
     public static void main(String[] args) {
 
         String account = "  LEVI_2024  ";

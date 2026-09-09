@@ -1,6 +1,6 @@
 package practice.regex;
 
-public class practice2 {
+public class Practice2 {
     public static void main(String[] args) {
         String memberId = "M001";
         boolean isId = memberId.matches("[A-Z]\\d{3}");

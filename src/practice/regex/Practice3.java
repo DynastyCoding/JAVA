@@ -1,6 +1,6 @@
 package practice.regex;
 
-public class practice3 {
+public class Practice3 {
     public static void main(String[] args) {
         String taxId = "12345678";
         boolean isTaxId = taxId.matches("[1-9]\\d{7}");
@@ -22,7 +22,8 @@ public class practice3 {
         System.out.println(isStrong);
 
         String email = "chovy.levi+2024@gmail.com.tw";
-        boolean isEmail = email.matches("[\\w.%+-]*@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
+        //boolean isEmail = email.matches("[\\w.%+-]*@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
+        boolean isEmail = email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
         System.out.println(isEmail);
 
         String invoice = "AB-12345678";

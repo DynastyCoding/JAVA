@@ -1,8 +1,8 @@
-package practice.stream_string;
+package practice.stream;
 
 import java.util.List;
 
-public class StreamPractice2 {
+public class Practice2 {
     public static void main(String[] args) {
         List<Integer> amounts = List.of(500,1200,800,1500,300);
         List<Double> discountedAmounts = amounts.stream()

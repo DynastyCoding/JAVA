@@ -1,6 +1,6 @@
 package practice.regex;
 
-public class practice {
+public class Practice {
     public static void main(String[] args) {
 
         String phone = "0912345678";
